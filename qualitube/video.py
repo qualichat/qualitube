@@ -54,19 +54,19 @@ class Video:
         self.tags: Optional[List[str]] = snippets.get('tags', None)
 
         # Statistics
-        view_count = _try_parse_int(snippets.get('viewCount'))
+        view_count = _try_parse_int(payload['statistics']['viewCount'])
         self.view_count: Optional[int] = view_count
 
-        like_count = _try_parse_int(snippets.get('likeCount'))
+        like_count = _try_parse_int(payload['statistics']['likeCount'])
         self.like_count = like_count
 
-        dislike_count = _try_parse_int(snippets.get('dislikeCount'))
+        dislike_count = _try_parse_int(payload['statistics']['dislikeCount'])
         self.dislike_count = dislike_count
 
-        favorite_count = _try_parse_int(snippets.get('favoriteCount'))
+        favorite_count = _try_parse_int(payload['statistics']['favoriteCount'])
         self.favorite_count = favorite_count
 
-        comment_count = _try_parse_int(snippets.get('commentCount'))
+        comment_count = _try_parse_int(payload['statistics']['commentCount'])
         self.comment_count = comment_count
 
     def __repr__(self) -> str:
