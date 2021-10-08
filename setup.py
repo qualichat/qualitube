@@ -21,7 +21,7 @@ with open('README.md') as f:
 
 
 setup(
-    name='qualitube',
+    name='qualichat-qualitube',
     author='Vitor Mussa',
     version=version,
     packages=['qualitube'],
